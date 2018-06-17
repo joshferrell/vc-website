@@ -7944,9 +7944,9 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
-vc-components@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vc-components/-/vc-components-1.0.1.tgz#1eaa4b3e6cce86366246504974fcd848a8876984"
+vc-components@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vc-components/-/vc-components-1.0.3.tgz#9c76dad77e3993567c8d9ce05cac4a751bba16e5"
   dependencies:
     clean-tag "^1.0.4"
     gatsby-link "^1.6.44"
