@@ -1,13 +1,20 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "vc-website",
+  "description": "Voice computer website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Josh Ferrell",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
-    "react-helmet": "^5.2.0"
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "polished": "^1.9.2",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.3.2",
+    "styled-system": "^2.3.1",
+    "system-components": "^2.2.0",
+    "vc-components": "^1.0.1"
   },
   "keywords": [
     "gatsby"
@@ -23,7 +30,7 @@
     "prettier": "^1.12.0"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/gatsbyjs/gatsby-starter-default"
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }

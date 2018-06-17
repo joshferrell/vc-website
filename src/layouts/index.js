@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import './index.css'
+import { Theme, Atoms } from 'vc-components';
 
 const Layout = ({ children, data }) => (
-  <div>
+  <Theme>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -14,18 +14,13 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
+	<Atoms.Container>
+		<Header siteTitle={data.site.siteMetadata.title} />
+	    <div>
+	      {children()}
+	    </div>
+	</Atoms.Container>
+</Theme>
 )
 
 Layout.propTypes = {
