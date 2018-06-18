@@ -55,7 +55,7 @@ const IndexPage = () => (
 				Have a microphone handy? Take a test drive with an instant product
 				demonstration to see how Voice Computer can help you.
 			</Atoms.SectionText>
-			<Atoms.ArrowButtonLink outline type="tertiary" to="/demo">
+			<Atoms.ArrowButtonLink type="tertiary" to="/demo" nostyle>
 				Try the demo
 			</Atoms.ArrowButtonLink>
 		</Molecules.Section>
@@ -67,7 +67,7 @@ const IndexPage = () => (
 			}}
 			renderFooter={() => (
 				<Atoms.DividerFooter>
-					<Atoms.ArrowButtonLink nostyle px="0" to="/how-it-works">
+					<Atoms.ArrowButtonLink nostyle px="0" to="/how-it-works" type="tertiary">
 						Learn more about Voice Computer
 					</Atoms.ArrowButtonLink>
 				</Atoms.DividerFooter>

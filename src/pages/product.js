@@ -105,7 +105,8 @@ const Product = () => (
 		>
 			<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
 				<Molecules.Section
-					p={4}
+					px={4}
+					py={5}
 					flex="1 20rem"
 					maxWidth="30rem"
 					m={3}
@@ -123,7 +124,8 @@ const Product = () => (
 					</Atoms.SectionText>
 				</Molecules.Section>
 				<Molecules.Section
-					p={4}
+					px={4}
+					py={5}
 					m={3}
 					maxWidth="30rem"
 					flex="1 20rem"
