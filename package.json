@@ -14,7 +14,7 @@
     "styled-components": "^3.3.2",
     "styled-system": "^2.3.1",
     "system-components": "^2.2.0",
-    "vc-components": "^1.0.3"
+    "vc-components": "^1.0.13"
   },
   "keywords": [
     "gatsby"
