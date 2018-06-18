@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-
 import { Theme, Atoms, Organisms } from 'vc-components';
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+	body {
+		margin: 0;
+	}
+`;
 
 const Layout = ({ children, data }) => (
 	<Theme>
@@ -17,7 +23,7 @@ const Layout = ({ children, data }) => (
 			<header>
 				<Organisms.DesktopMenu
 					renderLeftNav={() => [
-						<Atoms.NavLink to="/products">Products</Atoms.NavLink>,
+						<Atoms.NavLink to="/product">Product</Atoms.NavLink>,
 						<Atoms.NavLink to="/pricing">Pricing</Atoms.NavLink>,
 						<Atoms.NavLink to="/support">Support</Atoms.NavLink>
 					]}

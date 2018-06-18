@@ -8486,13 +8486,14 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
 
-vc-components@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vc-components/-/vc-components-1.0.3.tgz#9c76dad77e3993567c8d9ce05cac4a751bba16e5"
+vc-components@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/vc-components/-/vc-components-1.0.10.tgz#755aa041749cd406c5a557749e9bf8230f38d3b7"
   dependencies:
     clean-tag "^1.0.4"
     gatsby-link "^1.6.44"
     react-router-dom "^4.3.1"
+    webfontloader "^1.6.28"
 
 vendors@^1.0.0:
   version "1.0.2"
@@ -8545,6 +8546,10 @@ watchpack@^0.2.1:
     async "^0.9.0"
     chokidar "^1.0.0"
     graceful-fs "^4.1.2"
+
+webfontloader@^1.6.28:
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
 
 webpack-configurator@^0.3.0:
   version "0.3.1"
