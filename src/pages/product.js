@@ -59,34 +59,37 @@ const Product = () => (
 				...SubtitleAttributes
 			}}
 		>
-			<div>
-				<Molecules.Section
-					py={3}
-					titleAttributes={{
-						text: 'Up and running in an instant',
-						is: 'h3',
-						fontSize: 2
-					}}
-				>
-					<Atoms.SectionText>
-						Interact with any element using only your microphone through our
-						intuitive user interface.
-					</Atoms.SectionText>
-				</Molecules.Section>
-				<Molecules.Section
-					py={3}
-					titleAttributes={{
-						text: 'Unlimited flexibility',
-						is: 'h3',
-						fontSize: 2
-					}}
-				>
-					<Atoms.SectionText>
-						Tag your favorite controls for easy access to your most commonly
-						used app features.
-					</Atoms.SectionText>
-				</Molecules.Section>
-			</div>
+			<Atoms.Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-betweeen">
+				<img src="http://fillmurray.com/500/250" />
+				<Atoms.Box display="flex" flexDirection="column" justifyContent="space-around" m={[3, 6]} maxWidth="25rem">
+					<Molecules.Section
+						py={3}
+						titleAttributes={{
+							text: 'Up and running in an instant',
+							is: 'h3',
+							fontSize: 2
+						}}
+					>
+						<Atoms.SectionText>
+							Interact with any element using only your microphone through our
+							intuitive user interface.
+						</Atoms.SectionText>
+					</Molecules.Section>
+					<Molecules.Section
+						py={3}
+						titleAttributes={{
+							text: 'Unlimited flexibility',
+							is: 'h3',
+							fontSize: 2
+						}}
+					>
+						<Atoms.SectionText>
+							Tag your favorite controls for easy access to your most commonly
+							used app features.
+						</Atoms.SectionText>
+					</Molecules.Section>
+				</Atoms.Box>
+			</Atoms.Box>
 		</Molecules.Section>
 		<Molecules.Section
 			bg="primary.main"
@@ -103,46 +106,50 @@ const Product = () => (
 			}}
 			headerDivider="yellow"
 		>
-			<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+			<Atoms.Box display="flex" flexWrap="wrap" justifyContent="space-around">
 				<Molecules.Section
 					px={4}
 					py={5}
 					flex="1 20rem"
-					maxWidth="30rem"
-					m={3}
+					maxWidth="25rem"
+					m={4}
+					borderRadius={4}
 					bg="white"
-					boxShadow={1}
+					boxShadow={2}
 					titleAttributes={{
-						text: 'Up and running in an instant',
+						text: 'Personal guidance from start to finish',
 						is: 'h3',
 						fontSize: 2
 					}}
 				>
 					<Atoms.SectionText>
-						Interact with any element using only your microphone through our
-						intuitive user interface.
+						Our trainers are ready to walk you through our voice-activated controls,
+						fully-customize your Voice Computer solution, and handle anything else
+						it takes to get you hands-free.
 					</Atoms.SectionText>
 				</Molecules.Section>
 				<Molecules.Section
 					px={4}
 					py={5}
-					m={3}
-					maxWidth="30rem"
+					m={4}
+					borderRadius={4}
+					maxWidth="25rem"
 					flex="1 20rem"
 					bg="white"
-					boxShadow={1}
+					boxShadow={2}
 					titleAttributes={{
-						text: 'Unlimited flexibility',
+						text: 'On-demand instruction and support',
 						is: 'h3',
 						fontSize: 2
 					}}
 				>
 					<Atoms.SectionText>
-						Tag your favorite controls for easy access to your most commonly
-						used app features.
+						With Voice Computer you'll always have easy access to documentation,
+						expert-guided lessons, and the backing of over 20 years of voice
+						recognition experience.
 					</Atoms.SectionText>
 				</Molecules.Section>
-			</div>
+			</Atoms.Box>
 		</Molecules.Section>
 		<JoinConversation />
 	</article>
