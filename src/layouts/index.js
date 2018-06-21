@@ -28,7 +28,7 @@ const Layout = ({ children, data }) => (
 						<Atoms.NavLink to="/support">Support</Atoms.NavLink>
 					]}
 					renderRightNav={() => [
-						<Atoms.NavLink to="/about">Sign In</Atoms.NavLink>,
+						<Atoms.NavLink to="/login">Sign In</Atoms.NavLink>,
 						<Atoms.ArrowButtonLink to="/sign-up" type="secondary" squared>
 						Try Free
 						</Atoms.ArrowButtonLink>

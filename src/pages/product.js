@@ -1,6 +1,6 @@
 import React from 'react';
 import { Molecules, Atoms } from 'vc-components';
-import { JoinConversation } from '../components';
+import { JoinConversation, Wave } from '../components';
 
 const SectionAttributes = {
 	py: [5, 6],
@@ -46,9 +46,12 @@ const Product = () => (
 				</Atoms.ArrowButtonLink>
 			)}
 		/>
+		<Wave color="neutral.1" />
 		<Molecules.Section
 			bg="neutral.1"
-			{...SectionAttributes}
+			pb={[5, 6]}
+			pt={[5, 5, 3]}
+			alignItems="center"
 			headerDivider="green"
 			titleAttributes={{
 				text: 'Built for you.',
