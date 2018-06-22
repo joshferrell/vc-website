@@ -15,3 +15,18 @@ export const SubtitleAttributes = {
 	textAlign: 'center',
 	is: 'p'
 };
+
+export const HeroTitleAttributes = {
+	fontSize: [3, 4],
+	textAlign: 'center',
+	is: 'h1'
+};
+
+export const HeroSubtitleAttributes = {
+	textAlign: 'center',
+	fontSize: 1,
+	fontWeight: 'normal',
+	is: 'h2',
+	mt: 2,
+	mb: 5
+};

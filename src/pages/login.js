@@ -1,26 +1,87 @@
 import React, { Component } from 'react';
-import Auth0Lock from 'auth0-lock';
+import auth0 from 'auth0-js';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
+import { Atoms, Molecules } from 'vc-components';
+import { Wave } from '../components';
+import { HeroTitleAttributes, Auth0Config } from '../utils';
 
-const lock = new Auth0Lock(
-	'JEln3i9CazZTuJ1BQvxRGf6Q8oyCZWHk',
-	'peace-dragon.auth0.com'
-);
+const SignInBox = styled(Molecules.Section).attrs({
+	bg: 'white',
+	maxWidth: '700px',
+	borderRadius: 4,
+	width: '100%',
+	mt: '-130px',
+	mx: 'auto',
+	boxShadow: 2
+})`
+	z-index: 100;
+	position: relative;
+`;
 
-lock.on('authenticated', (authResult) => {
-	lock.getUserInfo(authResult.accessToken, (err, profile) => {
-		if (err) return;
+const Article = styled.article`
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+`;
 
-		localStorage.setItem('accessToken', authResult.accessToken);
-		localStorage.setItem('profile', JSON.stringify(profile));
-	});
-});
+export default class Login extends Component {
+	constructor() {
+		super();
+		this.webAuth = new auth0.WebAuth(Auth0Config);
+	}
 
-class Login extends Component {
+	handleGoogleSignIn = (e) => {
+		e.preventDefault();
+		this.webAuth.popup.authorize({ connection: 'google' });
+	}
+
 	render = () => (
-		<div>
-			{lock.show()}
-		</div>
+		<Article>
+			<Molecules.Section is="div" py={6} />
+			<Wave color="neutral.1" />
+			<Molecules.Section bg="neutral.1">
+				<SignInBox
+					is="header"
+					py={[5, 6]}
+					mb="120px"
+					alignItems="center"
+					titleAttributes={{
+						text: 'Sign In',
+						...HeroTitleAttributes
+					}}
+				>
+					<form>
+						<Atoms.Label mt={4}>
+							Email
+							<Atoms.Input type="email" required />
+						</Atoms.Label>
+						<Atoms.Label mt={4}>
+							Password
+							<Atoms.Input type="password" required />
+						</Atoms.Label>
+						<Atoms.ArrowButton mt={4}>
+							Sign In
+						</Atoms.ArrowButton>
+						<Atoms.Box mt={4}>
+							<Atoms.Label nostyle>
+								<Atoms.Input type="checkbox" /> Remember Me
+							</Atoms.Label>
+						</Atoms.Box>
+						<Atoms.Divider type="yellow" my={5} />
+						<Atoms.Box display="flex" justifyContent="center">
+							<Atoms.Button onClick={this.handleGoogleSignIn} mx="auto" type="secondary">
+								<Atoms.Icon name="google" pr={3} color="highlight.red" />
+								Login With Google
+							</Atoms.Button>
+						</Atoms.Box>
+						<Atoms.Box textAlign="center" mt={4}>
+							New to Voice Computer? <Link to="/sign-up">Sign up now.</Link>
+						</Atoms.Box>
+					</form>
+				</SignInBox>
+			</Molecules.Section>
+			<Atoms.Box flex="1" bg="neutral.1" />
+		</Article>
 	)
 }
-
-export default Login;

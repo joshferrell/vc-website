@@ -2,24 +2,11 @@ import React from 'react';
 import sys from 'system-components';
 import { Atoms, Molecules } from 'vc-components';
 import { Wave, JoinConversation } from '../components';
-
-const SectionAttributes = {
-	py: [5, 6],
-	alignItems: 'center'
-};
-
-const HeaderAttributes = {
-	fontSize: [2, 3],
-	textAlign: 'center',
-	is: 'h2',
-	mb: 2
-};
-
-const SubtitleAttributes = {
-	fontSize: 1,
-	textAlign: 'center',
-	is: 'p'
-};
+import {
+	SectionAttributes,
+	HeroTitleAttributes,
+	HeroSubtitleAttributes
+} from '../utils';
 
 const FlexBox = sys('color', 'maxWidth', 'display', 'space', 'alignItems', 'justifyContent', 'flexDirection');
 
@@ -32,18 +19,11 @@ const Pricing = () => (
 			{...SectionAttributes}
 			titleAttributes={{
 				text: 'Accessibility should\'t be hard.',
-				fontSize: [3, 4],
-				textAlign: 'center',
-				is: 'h1'
+				...HeroTitleAttributes
 			}}
 			subtitleAttributes={{
 				text: 'Voice Computer is the last speech recognition solution you\'ll ever need.',
-				textAlign: 'center',
-				fontSize: 1,
-				fontWeight: 'normal',
-				is: 'h2',
-				mt: 2,
-				mb: 5
+				...HeroSubtitleAttributes
 			}}
 			renderFooter={() => (
 				<Atoms.ArrowButtonLink to="/sign-up">
