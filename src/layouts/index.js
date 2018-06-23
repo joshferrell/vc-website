@@ -4,11 +4,13 @@ import Helmet from 'react-helmet';
 import { Theme, Atoms, Organisms } from 'vc-components';
 import { injectGlobal } from 'styled-components';
 
+/* eslint-disable */
 injectGlobal`
 	body {
 		margin: 0;
 	}
 `;
+/* eslint-enable */
 
 const ExternalNav = Atoms.NavLink.withComponent('a');
 

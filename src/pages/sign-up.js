@@ -3,7 +3,7 @@ import auth0 from 'auth0-js';
 import styled from 'styled-components';
 import { Atoms, Molecules } from 'vc-components';
 import { Wave } from '../components';
-import { HeroTitleAttributes, Auth0Config } from '../utils';
+import { HeroTitleAttributes, HeroSubtitleAttributes, Auth0Config } from '../utils';
 
 const SignInBox = styled(Molecules.Section).attrs({
 	bg: 'white',
@@ -46,8 +46,16 @@ export default class Login extends Component {
 					mb="120px"
 					alignItems="center"
 					titleAttributes={{
-						text: 'Sign Up',
+						text: 'Sign up',
+						px: 3,
+						mb: 2,
+						lineHeight: '1.25',
 						...HeroTitleAttributes
+					}}
+					subtitleAttributes={{
+						text: 'Take control of your computer, hands free.',
+						px: 3,
+						...HeroSubtitleAttributes
 					}}
 				>
 					<form>
@@ -66,7 +74,7 @@ export default class Login extends Component {
 						<Atoms.Box display="flex" justifyContent="center">
 							<Atoms.Button onClick={this.handleGoogleSignIn} mx="auto" type="secondary">
 								<Atoms.Icon name="google" pr={3} color="highlight.red" />
-								SignUp With Google
+								Sign up with Google
 							</Atoms.Button>
 						</Atoms.Box>
 					</form>

@@ -147,7 +147,7 @@ const Product = () => (
 					}}
 				>
 					<Atoms.SectionText>
-						With Voice Computer you'll always have easy access to documentation,
+						With Voice Computer you&#039;ll always have easy access to documentation,
 						expert-guided lessons, and the backing of over 20 years of voice
 						recognition experience.
 					</Atoms.SectionText>

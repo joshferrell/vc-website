@@ -1,6 +1,6 @@
 import React from 'react';
 import { Molecules } from 'vc-components';
-import { SubtitleAttributes, SectionAttributes } from '../utils';
+import { SectionAttributes } from '../utils';
 import { Wave } from '../components';
 
 const Support = () => (

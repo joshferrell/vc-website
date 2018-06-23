@@ -13,7 +13,7 @@ const Header = styled.header`
 	& > * {
 		flex: 1;
 	}
-`
+`;
 
 const IndexPage = () => (
 	<article>
@@ -21,7 +21,7 @@ const IndexPage = () => (
 			<Molecules.Section
 				titleAttributes={{
 					text: 'Have your say.',
-					fontSize: [3, 4],
+					fontSize: [3, 4]
 				}}
 				py={[2, 3]}
 			>
@@ -46,7 +46,7 @@ const IndexPage = () => (
 		</Header>
 		<Molecules.Section
 			titleAttributes={{
-				text: 'Try our live demo',
+				text: 'Try our live demo'
 			}}
 			bg="neutral.1"
 			py={[3, 6]}
