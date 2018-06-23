@@ -8,7 +8,7 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: team
+  - name: src/team
     label: Team Member
     folder: team
     create: true
@@ -29,7 +29,7 @@ collections:
       - name: Quora
         label: Quora Username
         widget: string
-  - name: blog
+  - name: src/blog
     label: Blog
     folder: blog
     create: true
