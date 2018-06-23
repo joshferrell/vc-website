@@ -25,10 +25,7 @@ const Article = styled.article`
 `;
 
 export default class Login extends Component {
-	constructor() {
-		super();
-		this.webAuth = new auth0.WebAuth(Auth0Config);
-	}
+	auth0 = new auth0.WebAuth(Auth0Config);
 
 	handleGoogleSignIn = (e) => {
 		e.preventDefault();
