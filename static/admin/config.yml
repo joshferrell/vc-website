@@ -8,9 +8,9 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: src/team
+  - name: team
     label: Team Member
-    folder: team
+    folder: src/team
     create: true
     slug: "{{slug}}"
     fields:
@@ -29,9 +29,9 @@ collections:
       - name: Quora
         label: Quora Username
         widget: string
-  - name: src/blog
+  - name: blog
     label: Blog
-    folder: blog
+    folder: src/blog
     create: true
     slug: "{{year}}-{{month}}-{{slug}}" # this will be the file name
     fields:
