@@ -10,7 +10,7 @@ public_folder: assets
 collections:
   - name: team
     label: Team Member
-    folder: src/team
+    folder: static/team
     create: true
     slug: "{{slug}}"
     fields:
@@ -31,7 +31,7 @@ collections:
         widget: string
   - name: blog
     label: Blog
-    folder: src/blog
+    folder: static/blog
     create: true
     slug: "{{year}}-{{month}}-{{slug}}" # this will be the file name
     fields:
