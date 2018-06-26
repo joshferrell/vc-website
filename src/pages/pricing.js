@@ -1,16 +1,12 @@
 import React from 'react';
-import sys from 'system-components';
 import { Atoms, Molecules } from 'vc-components';
-import { Wave, JoinConversation } from '../components';
+import { oneLineTrim } from 'common-tags';
+import { Wave, JoinConversation, Callout } from '../components';
 import {
 	SectionAttributes,
 	HeroTitleAttributes,
 	HeroSubtitleAttributes
 } from '../utils';
-
-const FlexBox = sys('color', 'maxWidth', 'display', 'space', 'alignItems', 'justifyContent', 'flexDirection');
-
-const Img = sys({ is: 'img' }, 'space');
 
 const Pricing = () => (
 	<article>
@@ -46,40 +42,26 @@ const Pricing = () => (
 		>
 			this is a test
 		</Molecules.Section>
-		<FlexBox bg="primary.main" display="flex" justifyContent="center">
-			<FlexBox
-				maxWidth="800px"
-				display="flex"
-				p={[5, 6]}
-				flexDirection={['column', 'column', 'row']}
-				alignItems={['center', 'center', 'flex-start']}
-				justifyContent="center"
-			>
-				<Img mr={[3, 4]} mb={[4, 4, 0]} mt={2} src="http://fillmurray.com/150/150" />
-				<Molecules.Section
-					bg="primary.main"
-					color="white"
-					titleAttributes={{
-						text: 'Special Requests?',
-						fontSize: [2, 3],
-						is: 'h2',
-						mb: 2
-					}}
-				>
-					We have plenty of experience delivering personalized speech recognition
-					solutions. Get in touch, and we&#039;ll discuss how to getting you up and running.
-					<FlexBox mt={2}>
-						<Atoms.ArrowButtonLink
-							to="/contact-us"
-							type="tertiary"
-							nostyle
-						>
-							Contact Us
-						</Atoms.ArrowButtonLink>
-					</FlexBox>
-				</Molecules.Section>
-			</FlexBox>
-		</FlexBox>
+		<Callout
+			bg="primary.main"
+			py={[5, 6]}
+			color="white"
+			title='Special Requests?'
+			description={oneLineTrim`
+				We have plenty of experience delivering personalized speech recognition
+				solutions. Get in touch, and we'll discuss how to getting you up and running.
+			`}
+			buttonAttributes={{
+				text: 'Contact Us',
+				to: '/contact-us',
+				type: 'tertiary',
+				nostyle: true
+			}}
+			imageAttributes={{
+				src: 'http://fillmurray.com/150/150',
+				alt: 'fillmurray :)'
+			}}
+		/>
 		<JoinConversation />
 	</article>
 );

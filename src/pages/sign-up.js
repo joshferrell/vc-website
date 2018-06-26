@@ -10,7 +10,7 @@ const SignInBox = styled(Molecules.Section).attrs({
 	maxWidth: '700px',
 	borderRadius: 4,
 	width: '100%',
-	mt: '-130px',
+	mt: '-300px',
 	mx: 'auto',
 	boxShadow: 2
 })`
@@ -22,6 +22,7 @@ const Article = styled.article`
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	flex: 1;
 `;
 
 export default class Login extends Component {
@@ -34,12 +35,12 @@ export default class Login extends Component {
 
 	render = () => (
 		<Article>
-			<Molecules.Section is="div" py={6} />
+			<Molecules.Section is="div" py="120px" />
 			<Wave color="neutral.1" />
 			<Molecules.Section bg="neutral.1">
 				<SignInBox
 					is="header"
-					py={[5, 6]}
+					py="120px"
 					mb="120px"
 					alignItems="center"
 					titleAttributes={{
