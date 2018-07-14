@@ -61,6 +61,60 @@ const BlogLink = styled(Link).attrs({
 	${fontWeight};
 `;
 
+const footerLinks = [
+	{
+		title: 'Product',
+		links: [
+			{
+				to: '/product',
+				text: 'Features'
+			},
+			{
+				to: '/pricing',
+				text: 'Pricing'
+			},
+			{
+				to: '/contact',
+				text: 'Contact Sales'
+			}
+		]
+	},
+	{
+		title: 'Resources',
+		links: [
+			{
+				to: '/',
+				text: 'Support'
+			},
+			{
+				to: '/',
+				text: 'Community Forum'
+			},
+			{
+				to: '/blog',
+				text: 'Our Blog'
+			}
+		]
+	},
+	{
+		title: 'About Us',
+		links: [
+			{
+				to: '/about-us/company',
+				text: 'Company'
+			},
+			{
+				to: '/about-us/customers',
+				text: 'Our Customers'
+			},
+			{
+				to: '/contact',
+				text: 'Contact Us'
+			}
+		]
+	}
+];
+
 const Layout = ({ children, data }) => (
 	<Theme>
 		<Helmet
@@ -77,7 +131,7 @@ const Layout = ({ children, data }) => (
 						<Atoms.NavLink to="/product">Product</Atoms.NavLink>,
 						<Atoms.NavLink to="/pricing">Pricing</Atoms.NavLink>,
 						<Molecules.DropdownNav title="Resources" left="-130px" minWidth="350px">
-							<IconLink to="/support" text="Support" iconName="phone">
+							<IconLink href="http://vc-docs.sloppy.zone" text="Support" iconName="phone">
 								Get in touch with us
 							</IconLink>
 							<IconLink href="http://forum.voicecomputer.com" text="Community" iconName="people">
@@ -137,10 +191,26 @@ const Layout = ({ children, data }) => (
 					)}
 				/>
 			</header>
-			<main style={{ display: 'flex', flexDirection: 'column', flex: '1' }}>{children()}</main>
-			<footer>
-				testeroo
-			</footer>
+			<Atoms.Box is="main" display="flex" flexDirection="column" flex="1">{children()}</Atoms.Box>
+			<Organisms.Footer
+				title="Voice Computer"
+				newsLetter={{
+					title: 'Stay in touch',
+					message: 'Discover new features and tips through our monthly newsletter.',
+					inputAttributes: {
+						type: 'email',
+						name: 'email',
+						placeholder: 'jane.doe@example.com'
+					},
+					buttonAttributes: {
+						text: 'Submit',
+						type: 'tertiary'
+					},
+					label: 'Email',
+					onSubmit: () => {}
+				}}
+				links={footerLinks}
+			/>
 		</Atoms.Container>
 	</Theme>
 );

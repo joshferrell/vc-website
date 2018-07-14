@@ -26,6 +26,7 @@ export const HeroSubtitleAttributes = {
 	textAlign: 'center',
 	fontSize: 1,
 	fontWeight: 'normal',
+	maxWidth: '800px',
 	is: 'h2',
 	mt: 2,
 	mb: 5

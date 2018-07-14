@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Molecules, Atoms } from 'vc-components';
 import { space, display } from 'styled-system';
-import { oneLineTrim } from 'common-tags';
+import sys from 'system-components';
+import { oneLine } from 'common-tags';
 import { JoinConversation, Callout, Wave } from '../components';
+import {
+	Office, Skype, Slack, Chrome, Firefox, Edge, Adobe, Citrix, TalkingToComputer, MailBalloons
+} from '../img';
 
 const Header = styled.header`
 	display: flex;
@@ -23,6 +27,19 @@ const Image = styled.img.attrs({
 })`
 	${display};
 `;
+
+const checkBoxCell = {
+	iconAttributes: { name: 'check', type: 'glyph', color: '#72C472' },
+	cellAttributes: { textAlign: 'center' }
+};
+
+const imageCellStyles = {
+	cellAttributes: { display: 'flex', alignItems: 'center', justifyContent: 'center' }
+};
+
+const CellImg = sys({
+	is: 'img'
+}, 'width', 'space');
 
 const IndexPage = () => (
 	<article>
@@ -56,26 +73,32 @@ const IndexPage = () => (
 					onSubmit={() => {}}
 				/>
 			</Molecules.Section>
-			<Image alt="something" src="http://fillmurray.com/800/400" />
+			<Image alt="Woman controlling computer with voice" src={TalkingToComputer} />
 		</Header>
 		<Wave color="neutral.1" />
 		<Callout
 			bg="neutral.1"
-			py={[5, 6]}
+			pt={5}
+			pb={[5, 6]}
 			title="Special Requests?"
-			description={oneLineTrim`
+			description={oneLine`
 				We have plenty of experience delivering personalized speech recognition
-				solutions. Get in touch, and we&#039;ll discuss how to getting you up and running.
+				solutions. Get in touch, and we'll discuss how to getting you up and running.
 			`}
 			buttonAttributes={{
 				text: 'Contact Us',
-				to: '/contact-us',
+				to: '/contact',
 				type: 'tertiary',
 				nostyle: true
 			}}
 			imageAttributes={{
-				src: 'http://fillmurray.com/150/150',
-				alt: 'fillmurray :)'
+				src: MailBalloons,
+				alt: 'envelope attached to balloons',
+				ariaHidden: true,
+				width: 250,
+				style: {
+					marginTop: '-40px'
+				}
 			}}
 		/>
 		<Atoms.Box
@@ -85,7 +108,7 @@ const IndexPage = () => (
 			justifyContent="space-between"
 			px={[3, 4]}
 			mx="auto"
-			pt={[4, 6]}
+			py={[5, 6]}
 		>
 			<Molecules.Section
 				flex="1 500px"
@@ -97,7 +120,7 @@ const IndexPage = () => (
 				}}
 				renderFooter={() => (
 					<Atoms.DividerFooter>
-						<Atoms.ArrowButtonLink nostyle px="0" to="/how-it-works" type="tertiary">
+						<Atoms.ArrowButtonLink nostyle px="0" to="/product" type="tertiary">
 							Learn more about Voice Computer
 						</Atoms.ArrowButtonLink>
 					</Atoms.DividerFooter>
@@ -112,15 +135,75 @@ const IndexPage = () => (
 				</Atoms.SectionText>
 			</Molecules.Section>
 			<Molecules.Table
-				mb={[5, 6]}
+				mb={[5, 0]}
+				mx="auto"
 				headerCells={[
 					{ text: 'App' },
-					{ text: 'Voice Control & Custom Commands', maxWidth: '200px' }
+					{
+						text: 'Voice Control & Custom Commands',
+						cellAttributes: { maxWidth: '200px' }
+					}
 				]}
+				buttonAttributes={{
+					text: 'and more',
+					to: '/product'
+				}}
 				bodyCells={[
 					[
-						{ text: 'Office' },
-						{ iconAttributes: { name: 'check' } }
+						{
+							render: () => (
+								<CellImg src={Office} alt="Microsoft Office" width="130px" px={2} />
+							),
+							...imageCellStyles
+						},
+						checkBoxCell
+					],
+					[
+						{
+							render: () => (
+								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
+									<CellImg src={Chrome} width="40px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Firefox} width="40px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Edge} width="40px" alt="Microsoft Edge" px={2} />
+								</div>
+							),
+							...imageCellStyles
+						},
+						checkBoxCell
+					],
+					[
+						{
+							render: () => (
+								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
+									<CellImg src={Slack} width="40px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Skype} width="40px" alt="Microsoft Edge" px={2} />
+								</div>
+							),
+							...imageCellStyles
+						},
+						checkBoxCell
+					],
+					[
+						{
+							render: () => (
+								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
+									<CellImg src={Adobe} width="54px" alt="Microsoft Edge" px={2} />
+								</div>
+							),
+							...imageCellStyles
+						},
+						checkBoxCell
+					],
+					[
+						{
+							render: () => (
+								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
+									<CellImg src={Citrix} width="90px" alt="Microsoft Edge" px={2} />
+								</div>
+							),
+							...imageCellStyles
+						},
+						checkBoxCell
 					]
 				]}
 				boxShadow={2}
