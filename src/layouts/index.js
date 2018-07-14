@@ -66,14 +66,17 @@ const footerLinks = [
 		title: 'Product',
 		links: [
 			{
+				key: 'features',
 				to: '/product',
 				text: 'Features'
 			},
 			{
+				key: 'pricing',
 				to: '/pricing',
 				text: 'Pricing'
 			},
 			{
+				key: 'sales',
 				to: '/contact',
 				text: 'Contact Sales'
 			}
@@ -83,14 +86,18 @@ const footerLinks = [
 		title: 'Resources',
 		links: [
 			{
-				to: '/',
+				key: 'support',
+				href: 'https://vc-docs.sloppy.zone',
 				text: 'Support'
 			},
 			{
-				to: '/',
-				text: 'Community Forum'
+				href: 'http://forum.voicecomputer.com',
+				key: 'forum',
+				text: 'Community Forum',
+				target: '_blank'
 			},
 			{
+				key: 'blog',
 				to: '/blog',
 				text: 'Our Blog'
 			}
@@ -100,14 +107,17 @@ const footerLinks = [
 		title: 'About Us',
 		links: [
 			{
+				key: 'company',
 				to: '/about-us/company',
 				text: 'Company'
 			},
 			{
+				key: 'customers',
 				to: '/about-us/customers',
 				text: 'Our Customers'
 			},
 			{
+				key: 'contact',
 				to: '/contact',
 				text: 'Contact Us'
 			}

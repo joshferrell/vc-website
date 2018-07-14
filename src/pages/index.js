@@ -73,7 +73,7 @@ const IndexPage = () => (
 					onSubmit={() => {}}
 				/>
 			</Molecules.Section>
-			<Image alt="Woman controlling computer with voice" src={TalkingToComputer} />
+			<Image width="300" height="350" alt="Woman controlling computer with voice" src={TalkingToComputer} />
 		</Header>
 		<Wave color="neutral.1" />
 		<Callout
@@ -88,7 +88,7 @@ const IndexPage = () => (
 			buttonAttributes={{
 				text: 'Contact Us',
 				to: '/contact',
-				type: 'tertiary',
+				type: 'primary',
 				nostyle: true
 			}}
 			imageAttributes={{
@@ -116,7 +116,8 @@ const IndexPage = () => (
 				mr={[0, 0, 6]}
 				titleAttributes={{
 					text: 'Exactly what it sounds like.',
-					fontSize: 3
+					fontSize: 3,
+					is: 'h2'
 				}}
 				renderFooter={() => (
 					<Atoms.DividerFooter>
@@ -162,9 +163,9 @@ const IndexPage = () => (
 						{
 							render: () => (
 								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
-									<CellImg src={Chrome} width="40px" alt="Microsoft Edge" px={2} />
-									<CellImg src={Firefox} width="40px" alt="Microsoft Edge" px={2} />
-									<CellImg src={Edge} width="40px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Chrome} width="40px" height="45px" alt="Chrome" px={2} />
+									<CellImg src={Firefox} width="40px" height="45px" alt="Firefox" px={2} />
+									<CellImg src={Edge} width="40px" height="45px" alt="Microsoft Edge" px={2} />
 								</div>
 							),
 							...imageCellStyles
@@ -175,8 +176,8 @@ const IndexPage = () => (
 						{
 							render: () => (
 								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
-									<CellImg src={Slack} width="40px" alt="Microsoft Edge" px={2} />
-									<CellImg src={Skype} width="40px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Slack} width="40px" height="45px" alt="Slack" px={2} />
+									<CellImg src={Skype} width="40px" height="45px" alt="Skype" px={2} />
 								</div>
 							),
 							...imageCellStyles
@@ -187,7 +188,7 @@ const IndexPage = () => (
 						{
 							render: () => (
 								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
-									<CellImg src={Adobe} width="54px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Adobe} width="54px" height="45px" alt="Adobe Creative Cloud" px={2} />
 								</div>
 							),
 							...imageCellStyles
@@ -198,7 +199,7 @@ const IndexPage = () => (
 						{
 							render: () => (
 								<div style={{ display: 'flex', justifyContent: 'space-around' }}>
-									<CellImg src={Citrix} width="90px" alt="Microsoft Edge" px={2} />
+									<CellImg src={Citrix} width="90px" height="45px" alt="Citrix" px={2} />
 								</div>
 							),
 							...imageCellStyles

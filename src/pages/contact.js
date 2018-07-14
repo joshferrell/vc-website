@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { Atoms, Molecules } from 'vc-components';
 import { SectionAttributes } from '../utils';
 import { Skew } from '../components';
@@ -45,7 +46,7 @@ export default class Support extends Component {
 					m="0 auto -120px"
 					maxWidth="600px"
 					p={[4, 5]}
-					boxShadow={2}
+					boxShadow={1}
 				>
 					<form>
 						<Atoms.Label py={2} inline>
@@ -123,9 +124,11 @@ export default class Support extends Component {
 								height="130px"
 							/>
 						</Atoms.Label>
-						<Atoms.ArrowButton>
-							Contact Sales
-						</Atoms.ArrowButton>
+						<Atoms.Box textAlign={['left', 'right']}>
+							<Atoms.ArrowButton type="tertiary">
+								Contact Sales
+							</Atoms.ArrowButton>
+						</Atoms.Box>
 					</form>
 				</Molecules.Section>
 			</Molecules.Section>
