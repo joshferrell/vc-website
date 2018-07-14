@@ -23,9 +23,9 @@ const Callout = ({ imageAttributes, title, description, buttonAttributes, color,
 					color={color}
 					titleAttributes={{
 						text: title,
-						fontSize: [2, 3],
+						fontSize: 2,
 						is: 'h2',
-						mb: 2
+						mb: 3
 					}}
 				>
 					{description}

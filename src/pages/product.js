@@ -1,24 +1,7 @@
 import React from 'react';
 import { Molecules, Atoms } from 'vc-components';
+import { HeaderAttributes, HeroTitleAttributes, HeroSubtitleAttributes, SectionAttributes, SubtitleAttributes } from '../utils';
 import { JoinConversation, Wave } from '../components';
-
-const SectionAttributes = {
-	py: [5, 6],
-	alignItems: 'center'
-};
-
-const HeaderAttributes = {
-	fontSize: [2, 3],
-	textAlign: 'center',
-	is: 'h2',
-	mb: 2
-};
-
-const SubtitleAttributes = {
-	fontSize: 1,
-	textAlign: 'center',
-	is: 'p'
-};
 
 const Product = () => (
 	<article>
@@ -27,18 +10,11 @@ const Product = () => (
 			{...SectionAttributes}
 			titleAttributes={{
 				text: 'Accessibility should\'t be hard.',
-				fontSize: [3, 4],
-				textAlign: 'center',
-				is: 'h1'
+				...HeroTitleAttributes
 			}}
 			subtitleAttributes={{
 				text: 'Voice Computer is the last speech recognition solution you\'ll ever need.',
-				textAlign: 'center',
-				fontSize: 1,
-				fontWeight: 'normal',
-				is: 'h2',
-				mt: 2,
-				mb: 5
+				...HeroSubtitleAttributes
 			}}
 			renderFooter={() => (
 				<Atoms.ArrowButtonLink to="/sign-up">
@@ -62,8 +38,8 @@ const Product = () => (
 				...SubtitleAttributes
 			}}
 		>
-			<Atoms.Box display="flex" flexDirection="row" flexWrap="wrap" justifyContent="space-betweeen">
-				<img src="http://fillmurray.com/500/250" />
+			<Atoms.Box mx="auto" display="flex" flexDirection="row" flexWrap="wrap" justifyContent="center">
+				<img style={{ width: '100%', flex: '1 500px', maxWidth: '500px' }} src="http://fillmurray.com/500/250" />
 				<Atoms.Box display="flex" flexDirection="column" justifyContent="space-around" m={[3, 6]} maxWidth="25rem">
 					<Molecules.Section
 						py={3}
