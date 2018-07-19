@@ -4,3 +4,4 @@ export { default as Callout } from './callout';
 export { IconLink } from './nav';
 export { default as Skew } from './skew';
 export { default as BorderCard } from './border-card';
+export { default as Pricing } from './pricing';
