@@ -1,10 +1,12 @@
 export const SectionAttributes = {
-	py: [5, 6],
+	py: 6,
+	px: 3,
 	alignItems: 'center'
 };
 
 export const HeaderAttributes = {
 	fontSize: [2, 3],
+	px: 3,
 	textAlign: 'center',
 	is: 'h2',
 	mb: 2

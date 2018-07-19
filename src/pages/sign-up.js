@@ -47,6 +47,7 @@ export default class Login extends Component {
 						text: 'Sign up',
 						px: 3,
 						mb: 2,
+						pb: 4,
 						lineHeight: '1.25',
 						...HeroTitleAttributes
 					}}
@@ -56,7 +57,7 @@ export default class Login extends Component {
 						...HeroSubtitleAttributes
 					}}
 				>
-					<form>
+					<Atoms.Box is="form" px={3} maxWidth="450px">
 						<Atoms.Label mt={4}>
 							Email
 							<Atoms.Input type="email" required />
@@ -75,7 +76,7 @@ export default class Login extends Component {
 								Sign up with Google
 							</Atoms.Button>
 						</Atoms.Box>
-					</form>
+					</Atoms.Box>
 				</SignInBox>
 			</Molecules.Section>
 			<Atoms.Box flex="1" bg="neutral.1" />

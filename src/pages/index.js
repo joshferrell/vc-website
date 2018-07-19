@@ -5,9 +5,7 @@ import { space, display } from 'styled-system';
 import sys from 'system-components';
 import { oneLine } from 'common-tags';
 import { JoinConversation, Callout, Wave } from '../components';
-import {
-	Office, Skype, Slack, Chrome, Firefox, Edge, Adobe, Citrix, TalkingToComputer, MailBalloons
-} from '../img';
+import { Office, Skype, Slack, Chrome, Firefox, Edge, Adobe, Citrix, TalkingToComputer, Microphone } from '../img';
 
 const Header = styled.header`
 	display: flex;
@@ -62,8 +60,9 @@ const IndexPage = () => (
 				<Molecules.InlineForm
 					inputAttributes={{
 						type: 'email',
+						placeholder: 'Email',
 						name: 'email',
-						py: [1, 2, '13px']
+						py: '13px'
 					}}
 					buttonAttributes={{
 						text: 'Start Free Trial',
@@ -80,25 +79,23 @@ const IndexPage = () => (
 			bg="neutral.1"
 			pt={5}
 			pb={[5, 6]}
-			title="Special Requests?"
+			title="Try our live demo!"
 			description={oneLine`
-				We have plenty of experience delivering personalized speech recognition
-				solutions. Get in touch, and we'll discuss how to getting you up and running.
+				Have a microphone handy? Take a test drive with an instant product demonstration
+				to see how Voice Computer can help you.
 			`}
 			buttonAttributes={{
-				text: 'Contact Us',
-				to: '/contact',
+				text: 'Try the demo',
+				to: '/',
 				type: 'primary',
 				nostyle: true
 			}}
 			imageAttributes={{
-				src: MailBalloons,
-				alt: 'envelope attached to balloons',
+				src: Microphone,
+				alt: 'microphone',
 				ariaHidden: true,
-				width: 250,
-				style: {
-					marginTop: '-40px'
-				}
+				width: 150,
+				style: { marginTop: '-4px' }
 			}}
 		/>
 		<Atoms.Box
@@ -209,6 +206,36 @@ const IndexPage = () => (
 				]}
 				boxShadow={2}
 			/>
+		</Atoms.Box>
+		<Atoms.Box display="flex" alignItems="center" justifyContent="space-between" p={6} flexWrap="wrap" maxWidth="900px" bg="primary.main" mx="auto">
+			<Molecules.Section
+				color="white"
+				p={4}
+				flex="1 250px"
+				titleAttributes={{
+					text: 'Don\'t just take our word for it.',
+					pb: 2
+				}}
+				renderFooter={() => (
+					<Atoms.DividerFooter>
+						<Atoms.ArrowButtonLink nostyle px="0" to="/product" type="tertiary">
+							Learn more about Voice Computer
+						</Atoms.ArrowButtonLink>
+					</Atoms.DividerFooter>
+				)}
+			>
+				Join <strong>thousands</strong> of voices from <strong>20 countries</strong> who
+				have said good-bye to pain.
+			</Molecules.Section>
+			<Molecules.Section borderRadius={4} p={5} flex="1 200px" bg="white" ml={[0, 5]}>
+				<Atoms.Box color="highlight.red" fontWeight={600} pb={1}>
+					Michael S.
+				</Atoms.Box>
+				<Atoms.Box>
+					Voice Computer has made my life as a worldwide account director for
+					FedEx Corporation much easier. I can tell you that the time savings are tremendous.
+				</Atoms.Box>
+			</Molecules.Section>
 		</Atoms.Box>
 		<JoinConversation />
 	</article>

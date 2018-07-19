@@ -49,10 +49,11 @@ export default class Login extends Component {
 					alignItems="center"
 					titleAttributes={{
 						text: 'Sign In',
+						pb: 4,
 						...HeroTitleAttributes
 					}}
 				>
-					<form>
+					<Atoms.Box is="form" maxWidth="450px" px={3}>
 						<Atoms.Label mt={4}>
 							Email
 							<Atoms.Input type="email" required />
@@ -79,7 +80,7 @@ export default class Login extends Component {
 						<Atoms.Box textAlign="center" mt={4}>
 							New to Voice Computer? <Link to="/sign-up">Sign up now.</Link>
 						</Atoms.Box>
-					</form>
+					</Atoms.Box>
 				</SignInBox>
 			</Molecules.Section>
 			<Atoms.Box flex="1" bg="neutral.1" />

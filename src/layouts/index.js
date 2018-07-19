@@ -180,22 +180,22 @@ const Layout = ({ children, data }) => (
 				/>
 				<Organisms.MobileMenu
 					cta
-					renderMenu={() => (
+					renderMenu={dismissMenu => (
 						<Box mt={3}>
-							<NavLink py={3} fontSize="1.2" to="/login" justifyContent="flex-start">
+							<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/login" justifyContent="flex-start">
 								<span>Sign In</span>
 								<Icon ml={4} name="rightArrow" type="outline" iconSize="sm" />
 							</NavLink>
-							<NavLink py={3} fontSize="1.2" to="/product" justifyContent="flex-start">Product</NavLink>
-							<NavLink py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Pricing</NavLink>
+							<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/product" justifyContent="flex-start">Product</NavLink>
+							<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Pricing</NavLink>
 							<Box bg="neutral.1" mt="12px" mb="8px" py={2} fontWeight={600} px={3}>
 								Resources
 							</Box>
 							<ColumnBox display="flex">
-								<NavLink py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">About Us</NavLink>
-								<NavLink py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Support</NavLink>
-								<NavLink py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Blog</NavLink>
-								<NavLink py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Community</NavLink>
+								<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">About Us</NavLink>
+								<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Support</NavLink>
+								<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Blog</NavLink>
+								<NavLink onClick={dismissMenu} py={3} fontSize="1.2" to="/Pricing" justifyContent="flex-start">Community</NavLink>
 							</ColumnBox>
 						</Box>
 					)}

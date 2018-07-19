@@ -8,3 +8,6 @@ export { default as Skype } from './skype.svg';
 export { default as Slack } from './slack.svg';
 export { default as TalkingToComputer } from './talking-to-computer.svg';
 export { default as MailBalloons } from './mail-balloons.svg';
+export { default as Microphone } from './microphone.svg';
+export { default as Community } from './community.svg';
+export { default as OutlookScreen } from './outlook_screen.svg';

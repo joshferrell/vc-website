@@ -1,6 +1,7 @@
 import React from 'react';
 import { oneLineTrim } from 'common-tags';
 import { Molecules, Atoms } from 'vc-components';
+import { Community } from '../../img';
 import { HeaderAttributes, HeroTitleAttributes, HeroSubtitleAttributes, SectionAttributes } from '../../utils';
 import { Wave, Callout } from '../../components';
 
@@ -72,13 +73,15 @@ const Customers = () => (
 			}
 			buttonAttributes={{
 				text: 'Contact Us',
-				to: '/contact-us',
+				to: '/contact',
 				type: 'tertiary',
 				nostyle: true
 			}}
 			imageAttributes={{
-				src: 'http://fillmurray.com/150/150',
-				alt: 'fillmurray :)'
+				src: Community,
+				alt: 'Grid of people smiling',
+				width: '225px',
+				style: { marginTop: '-16px' }
 			}}
 		/>
 	</article>

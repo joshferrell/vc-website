@@ -23,7 +23,9 @@ export default class Support extends Component {
 	render = () => (
 		<article>
 			<Molecules.Section
-				{...SectionAttributes}
+				pt={6}
+				pb={4}
+				alignItems="center"
 				titleAttributes={{
 					text: 'Contact our sales team',
 					is: 'h1',
@@ -133,7 +135,7 @@ export default class Support extends Component {
 				</Molecules.Section>
 			</Molecules.Section>
 			<Skew bg="primary.main" />
-			<Molecules.Section bg="primary.main" p="120px" />
+			<Molecules.Section bg="primary.main" p={80} />
 		</article>
 	)
 }

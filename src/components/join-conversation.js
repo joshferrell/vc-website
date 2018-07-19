@@ -4,7 +4,7 @@ import { Molecules, Atoms } from 'vc-components';
 const JoinConversation = ({ ...props }) => (
 	<Molecules.Section
 		{...props}
-		py={[5, 6]}
+		py={6}
 		alignItems="center"
 		titleAttributes={{
 			text: 'Ready to join the conversation?',

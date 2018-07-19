@@ -1,5 +1,6 @@
 import React from 'react';
 import { Molecules, Atoms } from 'vc-components';
+import { OutlookScreen } from '../img';
 import { HeaderAttributes, HeroTitleAttributes, HeroSubtitleAttributes, SectionAttributes, SubtitleAttributes } from '../utils';
 import { JoinConversation, Wave } from '../components';
 
@@ -26,6 +27,7 @@ const Product = () => (
 		<Molecules.Section
 			bg="neutral.1"
 			pb={[5, 6]}
+			px={3}
 			pt={[5, 5, 3]}
 			alignItems="center"
 			headerDivider="green"
@@ -38,8 +40,8 @@ const Product = () => (
 				...SubtitleAttributes
 			}}
 		>
-			<Atoms.Box mx="auto" display="flex" flexDirection="row" flexWrap="wrap" justifyContent="center">
-				<img style={{ width: '100%', flex: '1 500px', maxWidth: '500px' }} src="http://fillmurray.com/500/250" />
+			<Atoms.Box mx="auto" display="flex" width="100vw" flexDirection="row" flexWrap="wrap" justifyContent="center">
+				<img style={{ width: '100%', flex: '1 500px', maxWidth: '500px' }} src={OutlookScreen} alt="preview of voicecomputer in a mail client" width="400px" />
 				<Atoms.Box display="flex" flexDirection="column" justifyContent="space-around" m={[3, 6]} maxWidth="25rem">
 					<Molecules.Section
 						py={3}
