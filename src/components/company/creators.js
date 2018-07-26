@@ -25,10 +25,14 @@ const Creators = () => (
 		headerDivider="green"
 		titleAttributes={{
 			text: 'We are creators',
-			...HeaderAttributes
+			fontSize: [2, 3],
+			px: 3,
+			mt: 0,
+			textAlign: 'center',
+			is: 'h2'
 		}}
 	>
-		<Atoms.Box {...boxStyles}>
+		<Atoms.Box mt="44px" {...boxStyles}>
 			<img
 				src="http://fillmurray.com/500/400"
 				alt="fill murray fillter"
