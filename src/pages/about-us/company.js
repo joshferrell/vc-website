@@ -6,8 +6,8 @@ import { Creators, TeamListing } from '../../components/company';
 
 const Company = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
-	const tmp = edges.map(({ node }) => ({ excerpt: node.excerpt, ...node.frontmatter }));
-	const teamList = [...tmp, ...tmp, ...tmp];
+	const teamList = edges.map(({ node }) => ({ excerpt: node.excerpt, ...node.frontmatter }));
+
 	return (
 		<div>
 			<Molecules.Section
