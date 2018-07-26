@@ -21,6 +21,12 @@ collections:
         label: Title
         widget: string
         required: false
+      - name: date
+        label: Date
+        widget: date
+      - name: path
+        label: Path
+        widget: string
       - name: image
         label: Image
         widget: image
