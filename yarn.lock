@@ -1176,6 +1176,12 @@ babel-plugin-transform-regenerator@^6.22.0, babel-plugin-transform-regenerator@^
   dependencies:
     regenerator-transform "^0.10.0"
 
+babel-plugin-transform-regenerator@^6.26.0:
+  version "6.26.0"
+  resolved "https://registry.npmjs.org/babel-plugin-transform-regenerator/-/babel-plugin-transform-regenerator-6.26.0.tgz#e0703696fbde27f0a3efcacf8b4dca2f7b3a8f2f"
+  dependencies:
+    regenerator-transform "^0.10.0"
+
 babel-plugin-transform-strict-mode@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-strict-mode/-/babel-plugin-transform-strict-mode-6.24.1.tgz#d5faf7aa578a65bbe591cf5edae04a0c67020758"
@@ -2155,11 +2161,7 @@ common-tags@0.1.1:
   dependencies:
     babel-runtime "^6.6.1"
 
-common-tags@^1.4.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
-
-common-tags@^1.8.0:
+common-tags@^1.4.0, common-tags@^1.8.0:
   version "1.8.0"
   resolved "https://registry.npmjs.org/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
 
