@@ -26,6 +26,8 @@ const Header = sys({
 const Image = sys({
 	is: 'img',
 	flex: 1,
+	width: '100%',
+	height: 'auto',
 	display: ['none', 'none', 'block']
 });
 
@@ -51,7 +53,7 @@ const Hero = ({ setUserEmail, history }) => {
 					...titleStyles
 				}}
 			>
-				<Atoms.SectionText flex={1} fontSize={1} pb={2}>
+				<Atoms.SectionText flex={2} fontSize={1} pb={2}>
 					<strong>Voice Computer</strong> makes it easy to control your
 					computer with just your voice.
 				</Atoms.SectionText>
