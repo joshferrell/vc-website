@@ -30,7 +30,7 @@ collections:
       - name: image
         label: Image
         widget: image
-      - name: bio
+      - name: body
         label: Bio
         widget: markdown
       - name: twitter
