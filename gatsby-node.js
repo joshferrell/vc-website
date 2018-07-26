@@ -10,5 +10,8 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
 
 exports.modifyBabelrc = ({ babelrc }) => ({
 	...babelrc,
-	plugins: babelrc.plugins.concat(['transform-regenerator'])
+	plugins: babelrc.plugins.concat([
+		['transform-runtime', { "helpers": false, "polyfill": false, "regenerator": true }],
+		'transform-regenerator', 'babel-pol'
+	])
 });
