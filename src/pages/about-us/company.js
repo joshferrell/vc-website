@@ -1,6 +1,6 @@
 import React from 'react';
 import { Atoms, Molecules } from 'vc-components';
-import { SectionAttributes, HeroTitleAttributes, HeroSubtitleAttributes, HeaderAttributes } from '../../utils';
+import { SectionAttributes, HeroTitleAttributes, HeroSubtitleAttributes } from '../../utils';
 import { Wave } from '../../components';
 import { Creators, TeamListing } from '../../components/company';
 
