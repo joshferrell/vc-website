@@ -5,4 +5,4 @@ export {
 	HeroTitleAttributes,
 	HeroSubtitleAttributes
 } from './default-attributes';
-export { default as Auth0Config } from './auth-config';
+export { default as subscribeUser } from './subscribe-user';

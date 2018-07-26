@@ -14,12 +14,16 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - name: name
+      - name: title
         label: Name
         widget: string
-      - name: title
+      - name: employeeTitle
         label: Title
         widget: string
+        required: false
+      - name: image
+        label: Image
+        widget: image
       - name: bio
         label: Bio
         widget: markdown
@@ -31,122 +35,3 @@ collections:
         label: Quora Username
         widget: string
         required: false
-
-  - name: customers
-    label: Customers
-    folder: static/customers
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - name: type
-        label: Type
-        widget: string
-      - name: title
-        label: Title
-        widget: string
-      - name: description
-        label: Description
-        widget: text
-      - name: logos
-        label: Logos
-        widget: list
-        required: false
-        field:
-          - label: Image
-            name: image
-            widget: image
-      - name: featuredVideo
-        label: Featured Video
-        widget: object
-        required: false
-        fields:
-          - name: title
-            label: Title
-            widget: string
-          - name: youtubeUrl
-            label: Youtube Video Url
-            widget: string
-      - name: featuredTestamonial
-        label: Featured Testamonial
-        widget: object
-        required: false
-        fields:
-            - name: customer
-              label: Customer Name
-              widget: string
-            - name: title
-              label: Customer Title
-              widget: string
-            - name: quote
-              label: quote
-              widget: text
-
-  - name: testamonial
-    label: Testamonial
-    folder: static/testamonial
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - name: name
-        label: Customer Name
-        widget: string
-      - name: metaTitle
-        label: Meta Title
-        widget: string
-        pattern: [".{0,43}", "Must not be more than 43 characters"]
-      - name: metaDescription
-        label: Meta Description
-        widget: text
-        pattern: [".{0,300}", "Must not be more than 300 characters"]
-      - name: briefDescription
-        label: Brief Description
-        widget: text
-        pattern: [".{0,260}", "Must not be more than 260 characters"]
-      - name: body
-        label: Body
-        widget: markdown
-      - label: Logo
-        name: logo
-        widget: image
-      - label: Industry
-        name: industry
-        widget: string
-      - label: Location
-        name: location
-        required: false
-        widget: text
-
-  - name: blog
-    label: Blog
-    folder: static/blog
-    create: true
-    slug: "{{year}}-{{month}}-{{slug}}" # this will be the file name
-    fields:
-      - name: title
-        label: Title
-        widget: string
-      - name: metaTitle
-        label: Meta Title
-        widget: string
-        pattern: [".{0,43}", "Must not be more than 43 characters"]
-      - name: metaDescription
-        label: Meta Description
-        widget: text
-        pattern: [".{0,300}", "Must not be more than 300 characters"]
-      - name: date
-        label: Publish Date
-        widget: datetime
-      - name: body
-        label: Body
-        widget: markdown
-      - name: tags
-        label: Tags
-        widget: list
-        allow_add: true
-      - name: author
-        label: Post Author
-        widget: relation
-        collection: team
-        searchFields: ["name"]
-        valueField: name
-        displayFields: ["name", "title"]

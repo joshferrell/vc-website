@@ -1,12 +1,12 @@
 import React from 'react';
 import { Atoms, Molecules } from 'vc-components';
 
-import { BorderCard } from '../../../components';
+import { BorderCard } from '../../shared';
 
 const cardStyles = {
 	flex: '1 400px',
 	bg: 'neutral.0',
-	boxShadow: 2,
+	boxShadow: 3,
 	color: 'neutral.6',
 	textAlign: 'center',
 	maxWidth: '550px'
@@ -20,13 +20,14 @@ const EnterpriseCard = () => (
 			justifyContent="center"
 			alignItems="center"
 			titleAttributes={{
+				is: 'h2',
 				text: 'Enterprise',
 				textAlign: 'center',
 				fontSize: [2, 3],
 				mb: 2
 			}}
 			subtitleAttributes={{
-				text: 'Dedicated support, custom implementation, and ergonimcs at scale.',
+				text: 'Dedicated support, custom implementation, and ergonomics at scale.',
 				textAlign: 'center',
 				maxWidth: '300px',
 				fontSize: 1

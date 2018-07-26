@@ -5,6 +5,7 @@ const JoinConversation = ({ ...props }) => (
 	<Molecules.Section
 		{...props}
 		py={6}
+		is="section"
 		alignItems="center"
 		titleAttributes={{
 			text: 'Ready to join the conversation?',
