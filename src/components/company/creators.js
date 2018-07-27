@@ -1,4 +1,5 @@
 import React from 'react';
+import { Company } from '../../img';
 import { Atoms, Molecules } from 'vc-components';
 
 const containerStyles = {
@@ -33,8 +34,8 @@ const Creators = () => (
 	>
 		<Atoms.Box mt="44px" {...boxStyles}>
 			<img
-				src="http://fillmurray.com/500/400"
-				alt="fill murray fillter"
+				src={Company}
+				alt="team collaborating on different devices"
 				style={{
 					width: '100%', height: 'auto', flex: '1 500px', maxWidth: '500px'
 				}}

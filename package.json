@@ -22,11 +22,13 @@
     "polished": "^1.9.2",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
+    "react-share": "^2.2.0",
+    "react-tilt": "^0.1.4",
     "redux": "^4.0.0",
     "styled-components": "^3.3.2",
     "styled-system": "^2.3.1",
     "system-components": "^2.2.0",
-    "vc-components": "^1.0.55"
+    "vc-components": "^1.0.56"
   },
   "keywords": [
     "gatsby"

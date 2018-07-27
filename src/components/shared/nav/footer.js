@@ -87,6 +87,11 @@ const Footer = ({ url, mainList }) => (
 			onSubmit: subscribeUser(url, mainList)
 		}}
 		links={footerLinks}
+		renderLegal={() => (
+			<div>
+				Copyright &copy; VoiceTeach LLC. All rights reserved.
+			</div>
+		)}
 	/>
 );
 
