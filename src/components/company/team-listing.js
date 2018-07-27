@@ -39,6 +39,7 @@ const TeamListing = ({ team }) => (
 					flex={['1 100%', '1 100%', '1 45%']}
 					mt={5}
 					mb={3}
+					textAlign="center"
 					mx={3}
 					imageAttributes={{
 						alt: title,
@@ -47,13 +48,7 @@ const TeamListing = ({ team }) => (
 					}}
 					title={title}
 					subtitle={employeeTitle}
-					buttonAttributes={{
-						text: `Meet ${title}`,
-						to: path
-					}}
-				>
-					{excerpt}
-				</Molecules.ListItem>
+				/>
 			))}
 		</Atoms.Box>
 	</Section>

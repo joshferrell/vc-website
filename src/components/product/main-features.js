@@ -62,6 +62,7 @@ const MainFeatures = () => (
 			<Atoms.Box {...cardStyles}>
 				<Molecules.Section
 					py={3}
+					px={[3, 0]}
 					titleAttributes={{
 						text: 'Up and running in an instant',
 						...cardTitleStyles
@@ -74,6 +75,7 @@ const MainFeatures = () => (
 				</Molecules.Section>
 				<Molecules.Section
 					py={3}
+					px={[3, 0]}
 					titleAttributes={{
 						text: 'Unlimited flexibility',
 						...cardTitleStyles

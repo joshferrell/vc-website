@@ -1,7 +1,7 @@
 import React from 'react';
 import sys from 'system-components';
 
-const SVG = sys('color');
+const SVG = sys('color', 'space');
 
 const Wave = ({ ...props }) => (
 	<div style={{ marginBottom: '-10px' }}>

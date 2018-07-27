@@ -25,6 +25,22 @@ const Customers = () => (
 			)}
 		/>
 		<Wave color="neutral.1" />
+		<Atoms.Box is="section" bg="neutral.1" display="flex" justifyContent="center" p={6} pt={[5, 5, 0]}>
+			<Molecules.ListItem
+				imageAttributes={{
+					src: 'http://fillmurray.com/200/200',
+					alt: 'something here'
+				}}
+				title="Government"
+				buttonAttributes={{
+					text: 'Something',
+					to: '/'
+				}}
+				textAlign="center"
+			>
+				some simple text and stuff
+			</Molecules.ListItem>
+		</Atoms.Box>
 		<Callout
 			title="Connect with Voice Computer customers"
 			description={oneLine`

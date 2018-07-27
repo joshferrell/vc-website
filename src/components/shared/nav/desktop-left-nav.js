@@ -21,9 +21,9 @@ const DesktopLeftNav = () => (
 						<Link to="/blog">From the Blog</Link>
 					</Atoms.Box>
 					<Atoms.Box display="flex" flexDirection="column" color="primary.main">
-						<BlogLink to="/blog/asdf">Top Microphones for Speech Recognition</BlogLink>
-						<BlogLink to="/blog/asdf">Stop Doing Something and Do</BlogLink>
-						<BlogLink to="/blog/asdf">Isn&#039;t this great? It works.</BlogLink>
+						<BlogLink to="/article">Top Microphones for Speech Recognition</BlogLink>
+						<BlogLink to="/article">Stop Doing Something and Do</BlogLink>
+						<BlogLink to="/article">Isn&#039;t this great? It works.</BlogLink>
 						<BlogLink to="/blog" pt={2} fontWeight={600}>
 								View More
 							<Atoms.Icon name="rightArrow" iconSize="xs" ml={1} color="secondary.tertiary" />

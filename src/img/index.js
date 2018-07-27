@@ -12,3 +12,4 @@ export { default as Microphone } from './microphone.svg';
 export { default as Community } from './community.svg';
 export { default as OutlookScreen } from './outlook_screen.svg';
 export { default as FourOhFour } from './404.svg';
+export { default as Company } from './company.svg';
