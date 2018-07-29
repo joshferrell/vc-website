@@ -28,7 +28,8 @@ const Image = sys({
 	flex: 1,
 	width: '100%',
 	height: 'auto',
-	display: ['none', 'none', 'block']
+	display: ['none', 'none', 'block'],
+	maxWidth: '550px'
 });
 
 const titleStyles = {

@@ -36,6 +36,19 @@ module.exports = {
 				name: 'team'
 			}
 		},
-		'gatsby-transformer-remark'
+		'gatsby-transformer-remark',
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				name: 'Voice Computer',
+				short_name: 'Voice Computer',
+				start_url: '/',
+				background_color: '#202d4a',
+				theme_color: '#202d4a',
+				display: 'minimal-ui',
+				icon: 'src/img/vc-logo.png'
+			}
+		},
+		'gatsby-plugin-offline'
 	]
 };
