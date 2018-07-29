@@ -33,6 +33,9 @@ collections:
       - name: body
         label: Bio
         widget: markdown
+      - name: isEmployee
+        label: Is Employee
+        widget: boolean
       - name: twitter
         label: Twitter Handle
         widget: string
@@ -41,3 +44,63 @@ collections:
         label: Quora Username
         widget: string
         required: false
+
+  - name: blog
+    label: Blog Post
+    folder: static/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: path
+        label: Path
+        widget: string
+      - name: title
+        label: Article Title
+        widget: string
+      - name: metaTitle
+        label: Meta Title
+        widget: string
+        pattern: [".{0,43}", "Must not be more than 43 characters"]
+      - name: metaDescription
+        label: Meta Description
+        widget: string
+        pattern: [".{0,250}", "Must not be more than 250 characters"]
+      - name: date
+        label: Publish Date
+        widget: datetime
+      - name: body
+        label: Body
+        widget: markdown
+      - name: tags
+        label: Tags
+        widget: list
+        allow_add: true
+      - name: featuredImage
+        label: Featured Image
+        widget: image
+      - name: author
+        label: Post Author
+        widget: relation
+        collection: team
+        searchValues: ["name"]
+        valueField: name
+        displayFields: ["name"]
+
+  - name: testamonial
+    label: Testamonial
+    folder: static/testamonial
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: path
+        label: Path
+        widget: string
+      - name: title
+        label: Customer Name
+        widget: string
+      - name: description
+        label: Description
+        widget: text
+      - name: date
+        label: Publish Date
+        widget: datetime

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Atoms, Molecules } from 'vc-components';
 import styled from 'styled-components';
 import { HeaderAttributes } from '../../utils';
@@ -32,9 +33,7 @@ const TeamListing = ({ team }) => (
 		headerDivider="blue"
 	>
 		<Atoms.Box is="ul" p={0} display="flex" flexWrap="wrap">
-			{team.map(({
-				path, title, image, excerpt, employeeTitle
-			}) => (
+			{team.map(({ title, image, employeeTitle }) => (
 				<Molecules.ListItem
 					flex={['1 100%', '1 100%', '1 45%']}
 					mt={5}
@@ -53,5 +52,13 @@ const TeamListing = ({ team }) => (
 		</Atoms.Box>
 	</Section>
 );
+
+TeamListing.propTypes = {
+	team: PropTypes.arrayOf(PropTypes.shape({
+		title: PropTypes.string.isRequired,
+		image: PropTypes.string.isRequired,
+		employeeTitle: PropTypes.string.isRequired
+	})).isRequired
+};
 
 export default TeamListing;

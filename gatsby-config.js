@@ -41,7 +41,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: 'Voice Computer',
-				short_name: 'Voice Computer',
+				short_name: 'Voice Comp',
 				start_url: '/',
 				background_color: '#202d4a',
 				theme_color: '#202d4a',
