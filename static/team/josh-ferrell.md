@@ -6,6 +6,7 @@ path: /about-us/team/josh-ferrell
 image: /assets/logoheader.png
 twitter: norablindsided
 Quora: norablindsided
+isEmployee: true
 ---
 
 Josh is pretty cool :)

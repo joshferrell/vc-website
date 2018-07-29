@@ -38,7 +38,12 @@ export default Company;
 
 export const pageQuery = graphql`
 	query TeamQuery {
-	  allMarkdownRemark(filter: {frontmatter: {employeeTitle: {ne: ""}}}) {
+	  allMarkdownRemark(filter: {
+		  frontmatter: {
+			  employeeTitle: { ne: "" },
+			  isEmployee: { eq: true } 
+		  }
+	  }) {
 	    edges {
 	      node {
 			excerpt(pruneLength: 32)
