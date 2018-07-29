@@ -1,8 +1,11 @@
 ---
 path: /blog/installing-dragon
 title: How to correctly install Dragon
-metaTitle: adf
-metaDescription: adf
+metaTitle: Simple techniques for installing Dragon
+metaDescription: >-
+  Avoid common pitfalls when installing Dragon on your computer with our handy
+  quick tip guide, or simply use our "Virtual Dragon Trainer" to get lessons,
+  demonstration, and tutorial on Dragon.
 date: '2018-07-29T14:15:36-07:00'
 tags:
   - Getting Started
