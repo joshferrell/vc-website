@@ -78,13 +78,6 @@ collections:
       - name: featuredImage
         label: Featured Image
         widget: image
-      - name: author
-        label: Post Author
-        widget: relation
-        collection: team
-        searchValues: ["name"]
-        valueField: name
-        displayFields: ["name"]
 
   - name: testamonial
     label: Testamonial
