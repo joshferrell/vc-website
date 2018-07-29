@@ -1,7 +1,7 @@
 import React from 'react';
 import { oneLine } from 'common-tags';
 import { Atoms, Molecules } from 'vc-components';
-import { Community } from '../../img';
+import { Community, InOffice, Space, TalkingToComputer } from '../../img';
 import { SectionAttributes, HeroTitleAttributes, HeroSubtitleAttributes } from '../../utils';
 import { Callout, Wave } from '../../components';
 
@@ -25,21 +25,45 @@ const Customers = () => (
 			)}
 		/>
 		<Wave color="neutral.1" />
-		<Atoms.Box is="section" bg="neutral.1" display="flex" justifyContent="center" p={6} pt={[5, 5, 0]}>
-			<Molecules.ListItem
-				imageAttributes={{
-					src: 'http://fillmurray.com/200/200',
-					alt: 'something here'
-				}}
-				title="Government"
-				buttonAttributes={{
-					text: 'Something',
-					to: '/'
-				}}
-				textAlign="center"
+		<Atoms.Box
+			is="section"
+			bg="neutral.1"
+		>
+			<Atoms.Box
+				display="flex"
+				flexWrap="wrap"
+				justifyContent="space-between"
+				px={3}
+				pb={6}
+				mx="auto"
+				maxWidth="1110px"
+				pt={[5, 5, 0]}
 			>
-				some simple text and stuff
-			</Molecules.ListItem>
+				<Atoms.Box mx={3} my={4} is="div" textAlign="center" maxWidth="300px">
+					<img src={InOffice} alt="test" width="250px" height="189px" />
+					<Atoms.Box my={3} is="h2">Enterprise</Atoms.Box>
+					<Atoms.Box>
+						Cras molestie.Phasellus dapibus sollicitudin odio. Nam ligula tellus,
+						consectetur in massa ut, venenatis pulvinar ex. Donec viverra dapibus ex.
+					</Atoms.Box>
+				</Atoms.Box>
+				<Atoms.Box mx={3} my={4} is="div" textAlign="center" maxWidth="300px">
+					<img src={Space} alt="test" width="250px" height="189px" />
+					<Atoms.Box my={3} is="h2">Government</Atoms.Box>
+					<Atoms.Box>
+						Cras molestie.Phasellus dapibus sollicitudin odio. Nam ligula tellus,
+						consectetur in massa ut, venenatis pulvinar ex. Donec viverra dapibus ex.
+					</Atoms.Box>
+				</Atoms.Box>
+				<Atoms.Box mx={3} my={4} is="div" textAlign="center" maxWidth="300px">
+					<img src={TalkingToComputer} alt="test" width="250px" height="189px" />
+					<Atoms.Box my={3} is="h2">You</Atoms.Box>
+					<Atoms.Box>
+						Cras molestie.Phasellus dapibus sollicitudin odio. Nam ligula tellus,
+						consectetur in massa ut, venenatis pulvinar ex. Donec viverra dapibus ex.
+					</Atoms.Box>
+				</Atoms.Box>
+			</Atoms.Box>
 		</Atoms.Box>
 		<Callout
 			title="Connect with Voice Computer customers"

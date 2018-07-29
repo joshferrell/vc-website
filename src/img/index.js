@@ -13,3 +13,5 @@ export { default as Community } from './community.svg';
 export { default as OutlookScreen } from './outlook_screen.svg';
 export { default as FourOhFour } from './404.svg';
 export { default as Company } from './company.svg';
+export { default as InOffice } from './in_office.svg';
+export { default as Space } from './space.svg';
