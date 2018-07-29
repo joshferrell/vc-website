@@ -1,19 +1,7 @@
 import React from 'react';
 import { Atoms, Molecules } from 'vc-components';
 
-const data = {
-	title: 'Example title of article',
-	subtitle: 'Category',
-	description: 'Ut at nibh diam. Nam sodales risus lorem, ac hendrerit ligula suscipit a. Cras ullamcorper convallis est at dapibus. Fusce eu quam scelerisque, elementum mi eu, condimentum tellus. Vestibulum porta condimentum varius.',
-	to: '/article',
-	imageAttributes: {
-		src: 'http://www.fillmurray.com/896/504',
-		alt: 'bill murray here'
-	},
-	authorName: 'John Doe'
-};
-
-const ArticleListing = () => (
+const ArticleListing = ({ articles }) => (
 	<Molecules.Section
 		py={6}
 		px={[3, 6]}
@@ -30,7 +18,7 @@ const ArticleListing = () => (
 		}}
 	>
 		<Atoms.Box mt="52px">
-			{[data, data, data].map(article => <Molecules.ArticleRow my={4} {...article} />)}
+			{articles.map(article => <Molecules.ArticleRow my={4} {...article} />)}
 		</Atoms.Box>
 	</Molecules.Section>
 );

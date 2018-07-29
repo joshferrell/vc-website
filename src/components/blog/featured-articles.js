@@ -30,53 +30,22 @@ const Section = styled(Molecules.Section).attrs({
 	}
 `;
 
-const FeaturedArticles = () => (
+const FeaturedArticles = ({ articles }) => (
 	<Section>
-		<Atoms.LinkWrapper to="/article">
-			<Tilt options={{ max: 8, scale: 0.99 }}>
-				<Card
-					mx={2}
-					maxWidth="355px"
-					title="This is an example article"
-					imageAttributes={{
-						src: 'http://fillmurray.com/375/200'
-					}}
-				>
-					Ut at nibh diam. Nam sodales risus lorem, ac hendrerit ligula suscipit a.
-					Cras ullamcorper convallis est at dapibus.
-				</Card>
-			</Tilt>
-		</Atoms.LinkWrapper>
-		<Atoms.LinkWrapper to="/article">
-			<Tilt options={{ max: 8, scale: 0.99 }}>
-				<Card
-					mx={2}
-					maxWidth="355px"
-					title="This is an example article"
-					imageAttributes={{
-						src: 'http://fillmurray.com/375/200'
-					}}
-				>
-					Ut at nibh diam. Nam sodales risus lorem, ac hendrerit ligula suscipit a.
-					Cras ullamcorper convallis est at dapibus.
-				</Card>
-			</Tilt>
-		</Atoms.LinkWrapper>
-		<Atoms.LinkWrapper to="/article">
-			<Tilt options={{ max: 8, scale: 0.99 }}>
-				<Card
-					mx={2}
-					maxWidth="355px"
-					title="This is an example article"
-					imageAttributes={{
-						src: 'http://fillmurray.com/375/200'
-					}}
-				>
-					Ut at nibh diam. Nam sodales risus lorem, ac hendrerit ligula suscipit a.
-					Cras ullamcorper convallis est at dapibus.
-				</Card>
-			</Tilt>
-		</Atoms.LinkWrapper>
+		{articles.map(({ to, title, imageAttributes, description }) => (
+			<Atoms.LinkWrapper to={to}>
+				<Tilt options={{ max: 8, scale: 0.99 }}>
+					<Card
+						mx={2}
+						maxWidth="355px"
+						title="This is an example article"
+						imageAttributes={imageAttributes}
+					>
+						{description}
+					</Card>
+				</Tilt>
+			</Atoms.LinkWrapper>
+		))}
 	</Section>
 );
 

@@ -5,7 +5,7 @@ import { Wave, Share, Newsletter } from '../components';
 
 const Article = () => (
 	<article>
-		<Atoms.Box is="img" src="http://fillmurray.com/1440/350" alt="test" width="100%" />
+		<Atoms.Box is="img" src="http://placeholder.pics/svg/1440x350" alt="test" width="100%" />
 		<Wave color="white" mt="-73px" />
 		<Molecules.Section
 			is="header"
