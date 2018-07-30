@@ -3,7 +3,7 @@ import { Atoms, Molecules } from 'vc-components';
 import Link from 'gatsby-link';
 import { BlogBox, IconLink, BlogLink } from './shared';
 
-const DesktopLeftNav = () => (
+const DesktopLeftNav = ({ data }) => (
 	<React.Fragment>
 		<Atoms.NavLink to="/product">Product</Atoms.NavLink>
 		<Atoms.NavLink to="/pricing">Pricing</Atoms.NavLink>
@@ -21,9 +21,11 @@ const DesktopLeftNav = () => (
 						<Link to="/blog">From the Blog</Link>
 					</Atoms.Box>
 					<Atoms.Box display="flex" flexDirection="column" color="primary.main">
-						<BlogLink to="/article">Top Microphones for Speech Recognition</BlogLink>
-						<BlogLink to="/article">Stop Doing Something and Do</BlogLink>
-						<BlogLink to="/article">Isn&#039;t this great? It works.</BlogLink>
+						{data.allMarkdownRemark.edges.map(({ node }) => (
+							<BlogLink to={node.frontmatter.path}>
+								{node.frontmatter.title}
+							</BlogLink>
+						))}
 						<BlogLink to="/blog" pt={2} fontWeight={600}>
 								View More
 							<Atoms.Icon name="rightArrow" iconSize="xs" ml={1} color="secondary.tertiary" />

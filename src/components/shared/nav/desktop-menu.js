@@ -4,9 +4,9 @@ import { Organisms } from 'vc-components';
 import DesktopLeftNav from './desktop-left-nav';
 import DesktopRightNav from './desktop-right-nav';
 
-const DesktopMenu = () => (
+const DesktopMenu = ({ data }) => (
 	<Organisms.DesktopMenu
-		renderLeftNav={DesktopLeftNav}
+		renderLeftNav={() => <DesktopLeftNav data={data} />}
 		renderRightNav={DesktopRightNav}
 	/>
 );

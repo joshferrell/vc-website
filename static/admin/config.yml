@@ -78,6 +78,12 @@ collections:
       - name: featuredImage
         label: Featured Image
         widget: image
+      - name: featuredImageAlt
+        label: Featured Image Alt
+        widget: string
+      - name: isFeatured
+        label: Is Featured
+        widget: boolean
 
   - name: testamonial
     label: Testamonial

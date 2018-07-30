@@ -16,7 +16,7 @@ const Layout = ({ data, children }) => {
 			/>
 			<Atoms.Container>
 				<header>
-					<DesktopMenu />
+					<DesktopMenu data={data} />
 					<MobileMenu />
 				</header>
 				<Atoms.Box is="main">
@@ -49,6 +49,24 @@ export const query = graphql`
 					subscribe {
 						url
 						mainList
+					}
+				}
+			}
+		}
+		allMarkdownRemark(
+			limit: 3,
+			filter: {
+				frontmatter: {
+					path: { regex:"/blog/" }
+					isFeatured: { eq: true }
+				}
+			}
+		){
+			edges {
+				node {
+					frontmatter {
+						path
+						title
 					}
 				}
 			}

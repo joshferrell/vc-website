@@ -14,7 +14,7 @@ tags:
   - Installation
 featuredImage: /assets/maxresdefault.jpg
 featuredImageAlt: Installation screen of dragon naturally speaking
-isFeatured: false
+isFeatured: true
 ---
 ## Save to your boot drive
 It's important to install Dragon to your boot drive (also known as the C drive). The installation will default to this location, so simply not changing it is all you need to do. The largest portion of dragon is the user profile. You can move these files to a different location.

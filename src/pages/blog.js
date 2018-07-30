@@ -4,40 +4,101 @@ import { Wave, JoinConversation, Skew, Newsletter } from '../components';
 import { SectionAttributes, HeroTitleAttributes, HeroSubtitleAttributes } from '../utils';
 import { FeaturedArticles, ArticleListing } from '../components/blog';
 
-const article = {
-	title: 'Example title of article',
-	subtitle: 'Category',
-	description: 'Ut at nibh diam. Nam sodales risus lorem, ac hendrerit ligula suscipit a. Cras ullamcorper convallis est at dapibus. Fusce eu quam scelerisque, elementum mi eu, condimentum tellus. Vestibulum porta condimentum varius.',
-	to: '/article',
-	imageAttributes: {
-		src: 'http://www.placeholder.pics/svg/896x504',
-		alt: 'bill murray here'
-	},
-	authorName: 'John Doe'
+const Blog = ({ data }) => {
+	const blogList = data.blogListing.edges.map(({ node }) => ({
+		title: node.frontmatter.title,
+		subtitle: node.frontmatter.tags.length ? node.frontmatter.tags[0] : undefined,
+		description: node.excerpt,
+		to: node.frontmatter.path,
+		imageAttributes: {
+			src: node.frontmatter.featuredImage,
+			alt: node.frontmatter.featuredImageAlt
+		},
+		authorName: 'Voice Computer Staff'
+	}));
+
+	const featuredList = data.featuredListing.edges.map(({ node }) => ({
+		title: node.frontmatter.title,
+		description: node.excerpt,
+		to: node.frontmatter.path,
+		imageAttributes: {
+			src: node.frontmatter.featuredImage,
+			alt: node.frontmatter.featuredImageAlt
+		},
+		authorName: 'Voice Computer Staff'
+	}));
+
+	return (
+		<div>
+			<Molecules.Section
+				is="header"
+				{...SectionAttributes}
+				titleAttributes={{
+					text: 'Blog',
+					...HeroTitleAttributes
+				}}
+				subtitleAttributes={{
+					text: 'Voice Computer\'s blog for feature information and trusted source for getting the most from speech recognition.',
+					...HeroSubtitleAttributes
+				}}
+			/>
+			<Wave color="neutral.1" />
+			<FeaturedArticles articles={featuredList} />
+			<ArticleListing articles={blogList} />
+			<Atoms.Box py="150px" />
+			<Skew bg="neutral.1" />
+			<Newsletter mt="-300px" />
+			<JoinConversation bg="neutral.1" />
+		</div>
+	);
 };
 
-const Blog = () => (
-	<div>
-		<Molecules.Section
-			is="header"
-			{...SectionAttributes}
-			titleAttributes={{
-				text: 'Blog',
-				...HeroTitleAttributes
-			}}
-			subtitleAttributes={{
-				text: 'Voice Computer\'s blog for feature information and trusted source for getting the most from speech recognition.',
-				...HeroSubtitleAttributes
-			}}
-		/>
-		<Wave color="neutral.1" />
-		<FeaturedArticles articles={[article, article, article]} />
-		<ArticleListing articles={[article, article, article, article]} />
-		<Atoms.Box py="150px" />
-		<Skew bg="neutral.1" />
-		<Newsletter mt="-300px" />
-		<JoinConversation bg="neutral.1" />
-	</div>
-);
-
 export default Blog;
+
+export const pageQuery = graphql`
+	query BlogQuery {
+		blogListing: allMarkdownRemark(
+			limit: 5,
+			filter: {
+				frontmatter: {
+					path: { regex:"/blog/" }
+					isFeatured: { eq: false }
+				}
+			}
+		){
+			edges {
+				node {
+					frontmatter {
+						path
+						title
+						tags
+						featuredImage
+						featuredImageAlt
+					}
+					excerpt(pruneLength:200)
+				}
+			}
+		},
+		featuredListing: allMarkdownRemark(
+			limit: 3,
+			filter: {
+				frontmatter: {
+					path: { regex:"/blog/" }
+					isFeatured: { eq: true }
+				}
+			}
+		){
+			edges {
+				node {
+					frontmatter {
+						path
+						title
+						featuredImage
+						featuredImageAlt
+					}
+					excerpt(pruneLength:150)
+				}
+			}
+		}
+	}
+`;
