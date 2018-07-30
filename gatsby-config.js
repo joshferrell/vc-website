@@ -43,6 +43,13 @@ module.exports = {
 				path: `${__dirname}/static/blog`
 			}
 		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'testamonial',
+				path: `${__dirname}/static/testamonial`
+			}
+		},
 		'gatsby-transformer-remark'
 	]
 };

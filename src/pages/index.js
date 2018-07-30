@@ -20,7 +20,7 @@ const productStyles = {
 	justifyContent: 'space-between'
 };
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
 	<div>
 		<Hero />
 		<Wave color="neutral.1" />
@@ -47,9 +47,28 @@ const IndexPage = () => (
 		</Atoms.Box>
 		<Skew bg="neutral.0" />
 		<Atoms.Box bg="neutral.0" py="140px" mb="-180px" />
-		<Customer />
+		<Customer data={data} />
 		<JoinConversation />
 	</div>
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+	query HomeQuery {
+	  testamonials: allMarkdownRemark(
+		  filter: { frontmatter: {
+			  path: { regex: "/testamonial/" }
+		  }
+	  }) {
+		edges {
+		  node {
+			frontmatter {
+			  title
+			  description
+			}
+		  }
+		}
+	  }
+	}
+`;

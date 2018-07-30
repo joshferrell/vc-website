@@ -6,7 +6,7 @@ import { MailBalloons } from '../img';
 import { Wave, Skew, Callout, JoinConversation } from '../components';
 import { KeyFeatures, PricingCard } from '../components/pricing';
 
-const Pricing = () => (
+const Pricing = ({ data }) => (
 	<div>
 		<Molecules.Section
 			is="header"
@@ -22,7 +22,7 @@ const Pricing = () => (
 		/>
 		<Wave color="primary.main" />
 		<Atoms.Box bg="primary.main" py="136px" />
-		<PricingCard />
+		<PricingCard {...data.site.siteMetadata.configuration.pricing} />
 		<KeyFeatures />
 		<Skew bg="primary.main" />
 		<Callout
@@ -48,3 +48,18 @@ const Pricing = () => (
 );
 
 export default Pricing;
+
+export const pageQuery = graphql`
+	query Price {
+		site {
+			siteMetadata {
+				configuration {
+					pricing {
+						monthly
+						yearly
+					}
+				}
+			}
+		}
+	}
+`;

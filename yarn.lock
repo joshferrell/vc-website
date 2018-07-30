@@ -281,6 +281,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animejs@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -5819,6 +5823,10 @@ lodash.foreach@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.foreach/-/lodash.foreach-4.5.0.tgz#1a6a35eace401280c7f06dddec35165ab27e3e53"
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -7931,6 +7939,13 @@ react-aim@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/react-aim/-/react-aim-0.2.2.tgz#05c67649393ce9dadaf69ee551e50b944f8c363b"
 
+react-anime@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/react-anime/-/react-anime-2.1.0.tgz#e11f0cbb868f7c13bba7821e9c5947325a1380c1"
+  dependencies:
+    animejs "^2.2.0"
+    lodash.isequal "^4.5.0"
+
 react-aria-menubutton@^5.1.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-aria-menubutton/-/react-aria-menubutton-5.1.1.tgz#56b1f36ff43de48dfa1eab16e9f5efc1a63dc0a9"
@@ -8216,6 +8231,12 @@ react-split-pane@^0.1.66:
 react-spring@^5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.4.0.tgz#4989b10dd0fac20a14f43ef3de78fabec705f832"
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.51"
+
+react-spring@^5.5.1:
+  version "5.5.1"
+  resolved "https://registry.npmjs.org/react-spring/-/react-spring-5.5.1.tgz#3c66044bd3d1a960462491c3c2728b3357781c81"
   dependencies:
     "@babel/runtime" "7.0.0-beta.51"
 
